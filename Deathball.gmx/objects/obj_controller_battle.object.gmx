@@ -64,7 +64,8 @@ if (room == rm_battle) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.resetGame) {
+            <string>if (global.pause) exit;
+if (global.resetGame) {
     global.player1.x = 200;
     global.player1.y = 700;
     global.player1.dead = false;

@@ -92,6 +92,7 @@
   <objects name="objects">
     <objects name="Menu">
       <object>objects\obj_menu_select</object>
+      <object>objects\obj_pause</object>
     </objects>
     <objects name="Selection">
       <object>objects\obj_controller</object>
@@ -102,6 +103,7 @@
     <objects name="Player">
       <object>objects\obj_player1</object>
       <object>objects\obj_player2</object>
+      <object>objects\obj_player_parent</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_shinobi</object>
@@ -111,7 +113,6 @@
       <object>objects\obj_iman2</object>
       <object>objects\obj_jane2</object>
     </objects>
-    <object>objects\obj_player_parent</object>
     <object>objects\obj_ground</object>
     <object>objects\obj_controller_battle</object>
     <object>objects\obj_stone</object>

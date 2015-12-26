@@ -112,7 +112,8 @@ aprate = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_gravity(1);
+            <string>if (global.pause) exit;
+scr_gravity(1);
 var hitstrength = 0;
 if (playerNum == 1) {
     hitstrength = global.player1.hitStrength;

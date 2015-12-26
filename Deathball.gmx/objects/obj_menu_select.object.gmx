@@ -25,12 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu[0] = "Start";
+            <string>if (instance_exists(rm_battle))
+    menu[0] = "Resume";
+else
+    menu[0] = "Start";
 menu[1] = "Controls";
 menu[2] = "Credits";
 menu[3] = "Quit";
 
-space = 128;
+space = 110;
 mpos = 0;
 </string>
           </argument>
@@ -58,42 +61,39 @@ mpos = 0;
 move -= max(keyboard_check_pressed(vk_up), keyboard_check_pressed(ord("W")), 0);
 move += max(keyboard_check_pressed(vk_down), keyboard_check_pressed(ord("S")), 0);
 
-if(move != 0)
-{
+if (move != 0) {
     mpos += move;
-    if(mpos&lt;0)
-    {
+    if (mpos &lt; 0)
         mpos = array_length_1d(menu) - 1;
-    }
-    if(mpos &gt; array_length_1d(menu) - 1)
-    {
+    if (mpos &gt; array_length_1d(menu) - 1)
         mpos = 0;
-    }
 }
-
-push = keyboard_check_pressed(vk_enter);
-if(push == 1)
-{
-    switch(mpos)
-    {
+if (keyboard_check_pressed(vk_f4) == 1) {
+    game_end();
+}
+if (keyboard_check_pressed(vk_enter) == 1) {
+    switch (mpos) {
         case 0:
             //Go to character select room
-            room_goto(rm_characterSelect);
-            break;
-            
+            if (instance_exists(rm_battle)) {
+                room_goto(rm_battle);
+            } else {
+                with (all) {
+                    instance_destroy();
+                }    
+                room_goto(rm_characterSelect);
+            }
+            break; 
         case 1: 
             //Go to controls room
             break;
-        
         case 2: 
             //Go to Credits room
             break;
-        
         case 3: 
             //Quit game
             game_end();
             break;
-        
         default:
             break;
     }
