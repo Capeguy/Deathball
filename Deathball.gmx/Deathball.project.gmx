@@ -133,6 +133,9 @@
     <objects name="Item">
       <object>objects\obj_item_parent</object>
       <object>objects\obj_item_sonic</object>
+      <object>objects\obj_item_shrink</object>
+      <object>objects\obj_item_convert</object>
+      <object>objects\obj_item_abilityplus</object>
       <object>objects\obj_item_controller</object>
       <object>objects\obj_item_snail</object>
     </objects>

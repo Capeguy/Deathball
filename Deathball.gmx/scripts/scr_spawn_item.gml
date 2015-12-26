@@ -1,10 +1,10 @@
-itemNum = argument0;
 array[0] = obj_item_sonic;
 array[1] = obj_item_snail;
-
-itemsOnField++;
-randomize();
+array[2] = obj_item_convert;
+array[3] = obj_item_abilityplus;
+array[4] = obj_item_shrink;
+itemNum = random(0, array_length_1d(array)) - 1;
+obj_item_controller.itemsOnField++;
 var itemX = irandom_range(64, room_width-64);
-randomize();
 var itemY = irandom_range(600, 800);
 instance_create(itemX, itemY, array[itemNum]);
