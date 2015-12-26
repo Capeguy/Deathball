@@ -58,7 +58,6 @@
     draw_set_alpha(1);
     draw_text(room_width / 2, room_height / 2, "Game Paused");
     draw_text(room_width / 2, room_height / 2 + 100, "Press Esc to Resume");
-    draw_set_color(c_black);
 }
 </string>
           </argument>
@@ -82,7 +81,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.pause == 0) {
+            <string>if (global.pause == 0 &amp;&amp; room_first == rm_victory) {
     global.pause = 1;
 } else {
     global.pause = 0;

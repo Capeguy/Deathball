@@ -43,6 +43,8 @@ ap_p1 = instance_create (300, room_height - 100, obj_ap_p1);
 ap_p2 = instance_create (room_width - 300, room_height - 100, obj_ap_p2);
 ap_p1.image_speed = 0;
 ap_p2.image_speed = 0;
+
+global.winner = 0;
 </string>
           </argument>
         </arguments>
@@ -65,7 +67,10 @@ ap_p2.image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if (global.winner != 0) {
+    room_goto(rm_victory);
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -87,19 +92,19 @@ ap_p2.image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.player1Lives == 0)
-{
+            <string>draw_set_halign(fa_center);
+if (global.player1Lives == 0) {
     draw_text(room_width/2, room_height/2, "Player 2 wins");
     draw_set_colour(c_blue);
     audio_pause_all();
     audio_play_sound(snd_victory, 1, false);
-}
-else if( global.player2Lives == 0)
-{
+    global.winner = 2;
+} else if (global.player2Lives == 0) {
     draw_text(room_width/2, room_height/2, "Player 1 wins");
     draw_set_colour(c_red);
     audio_pause_all();
     audio_play_sound(snd_victory, 1, false);
+    global.winner = 1;
 }
 draw_set_font(font_win);
 draw_set_colour(c_white);

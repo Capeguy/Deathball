@@ -35,11 +35,13 @@ if (room == rm_battle) {
     global.roundNum = 1;
     global.lastCollision = current_time;
     ball1 = instance_create(room_width/2, 720, obj_stone);
+    /*
     for (i = 0; i &lt; 10; i++) {
-        ball = instance_create( 10 + random(room_width - 10), 720, obj_stone); 
+        ball = instance_create( 50 + random(room_width - 50), 720, obj_stone); 
         ball.speed = 10;
         ball.direction = random(360);
     }
+    */
     //ball2 = instance_create(800, 720, obj_stone);
 }
 </string>
@@ -88,7 +90,7 @@ if (global.resetGame) {
     } else if (global.roundNum &lt;= 8) { // Phase 2
         instance_create(room_width/2 - 200, 700, obj_stone);
         instance_create(room_width/2 + 200, 700, obj_stone);
-    } else { // Phase 3
+    } else if (global.roundNum &lt;= 10){ // Phase 3
         instance_create(room_width/2, 700, obj_stone);
         instance_create(room_width/2 - 200, 700, obj_stone);
         instance_create(room_width/2 + 200, 700, obj_stone);
