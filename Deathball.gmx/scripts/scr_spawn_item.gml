@@ -3,7 +3,7 @@ array[1] = obj_item_snail;
 array[2] = obj_item_convert;
 array[3] = obj_item_abilityplus;
 array[4] = obj_item_shrink;
-itemNum = random(0, array_length_1d(array)) - 1;
+itemNum = random(array_length_1d(array)) - 1;
 obj_item_controller.itemsOnField++;
 var itemX = irandom_range(64, room_width-64);
 var itemY = irandom_range(600, 800);
