@@ -4,26 +4,42 @@ with (obj_item_controller) {
     itemsOnField--;
 }
 //show_message(object_get_name(item.object_index));
-if(playerNum == 1)
-{
+if (playerNum == 1) {
     player = global.player1;
-}
-else if(playerNum == 2){
+} else if(playerNum == 2){
     player = global.player2;
 }
-if(object_get_name(item.object_index) == "obj_item_sonic")
-{
-    with(item){ instance_destroy();}
-    global.affectedPlayerSpeed = player.playerspeed;
-    player.playerspeed = player.playerspeed * 1.5;
-    alarm[2] = fps * 5;   
-    global.affectedPlayer = playerNum;
+
+switch (object_get_name(item.object_index)) {
+    case "obj_item_sonic":
+        global.affectedPlayerSpeed = player.playerspeed;
+        player.playerspeed = player.playerspeed * 1.5;
+        alarm[2] = fps * 5;   
+        global.affectedPlayer = playerNum;    
+        break;
+    case "obj_item_snail":
+        global.affectedPlayerSpeed = player.playerspeed;
+        player.playerspeed = player.playerspeed * 0.8;
+        alarm[2] = fps * 5;   
+        global.affectedPlayer = playerNum;       
+        break;
+    case "obj_item_convert":
+        if (playerNum == 1) {
+            with (obj_stone) {
+                sprite_index = spr_stone_player1;
+            }
+        } else {
+            with (obj_stone) {
+                sprite_index = spr_stone_player2;            
+            }
+        }
+        global.affectedPlayer = playerNum;       
+        break;
+    case "obj_item_abilityplus":
+        global.affectedPlayerAPRate = player.aprate;
+        player.aprate = player.aprate * 2;
+        alarm[3] = fps * 5;
+        global.affectedPlayer = playerNum;       
+        break;       
 }
-else if(object_get_name(item.object_index) == "obj_item_snail")
-{
-    with(item){ instance_destroy();}
-    global.affectedPlayerSpeed = player.playerspeed;
-    player.playerspeed = player.playerspeed * 0.8;
-    alarm[2] = fps * 5;   
-    global.affectedPlayer = playerNum;
-}
+with(item){ instance_destroy();}
