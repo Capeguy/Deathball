@@ -61,7 +61,7 @@ if(room == rm_characterSelect)
         image_speed = 0;
     }
     
-    charaTrophy1 = instance_create(400, 900, obj_chara_trophy);
+    charaTrophy1 = instance_create(400, 800, obj_chara_trophy);
     charaTrophy1.image_index = 0;
     charaTrophy1.image_speed = 0;
 }

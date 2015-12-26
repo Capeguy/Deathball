@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>5</bbox_left>
-  <bbox_right>102</bbox_right>
-  <bbox_top>17</bbox_top>
-  <bbox_bottom>146</bbox_bottom>
+  <bbox_left>8</bbox_left>
+  <bbox_right>171</bbox_right>
+  <bbox_top>28</bbox_top>
+  <bbox_bottom>244</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>110</width>
-  <height>150</height>
+  <width>183</width>
+  <height>250</height>
   <frames>
     <frame index="0">images\spr_chara_trophy_0.png</frame>
     <frame index="1">images\spr_chara_trophy_1.png</frame>
