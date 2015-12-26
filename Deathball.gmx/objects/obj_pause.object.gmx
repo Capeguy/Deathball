@@ -58,8 +58,31 @@
     draw_set_alpha(1);
     draw_text(room_width / 2, room_height / 2, "Game Paused");
     draw_text(room_width / 2, room_height / 2 + 100, "Press Esc to Resume");
-    draw_set_color(c_black);
+    draw_text(room_width / 2, room_height / 2 + 200, "Press F4 to Quit");
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="115">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>game_end();
 </string>
           </argument>
         </arguments>
@@ -82,7 +105,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.pause == 0) {
+            <string>if (global.pause == 0 &amp;&amp; room != rm_victory) {
     global.pause = 1;
 } else {
     global.pause = 0;

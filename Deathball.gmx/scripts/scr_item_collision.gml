@@ -15,7 +15,7 @@ if(object_get_name(item.object_index) == "obj_item_sonic")
 {
     with(item){ instance_destroy();}
     global.affectedPlayerSpeed = player.playerspeed;
-    player.playerspeed = player.playerspeed * 2;
+    player.playerspeed = player.playerspeed * 1.5;
     alarm[2] = fps * 5;   
     global.affectedPlayer = playerNum;
 }
@@ -23,7 +23,7 @@ else if(object_get_name(item.object_index) == "obj_item_snail")
 {
     with(item){ instance_destroy();}
     global.affectedPlayerSpeed = player.playerspeed;
-    player.playerspeed = player.playerspeed * 0.5;
+    player.playerspeed = player.playerspeed * 0.8;
     alarm[2] = fps * 5;   
     global.affectedPlayer = playerNum;
 }

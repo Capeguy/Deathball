@@ -150,6 +150,7 @@
     <room>rooms\rm_menu</room>
     <room>rooms\rm_characterSelect</room>
     <room>rooms\rm_battle</room>
+    <room>rooms\rm_victory</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
