@@ -100,7 +100,6 @@ spr = noone;
             <string>
 if(obj != noone){
     global.player2 = obj;
-    show_message("player 2 assigned");
 }
 
 

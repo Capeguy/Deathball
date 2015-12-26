@@ -12,8 +12,7 @@ if(keyboard_check(vk_f1)) // Hax
     scr_live(2, obj_hud_controller);
 }
 
-if (dead)
-{
+if (dead) {
     if (sprite_index != dead_sprite) {
         sprite_index = dead_sprite;
         image_index = 0;
@@ -24,27 +23,22 @@ if (dead)
             global.resetGame = true;
         }
     }
-} else if(canmove && !dead)
-{
-    if(keyboard_check(right)) // && place_free(x+playerspeed,y) this doesnt work
-    {
+} else if(canmove && !dead) {
+    if (keyboard_check(right)) { // && place_free(x+playerspeed,y) this doesnt work
         image_xscale = abs(image_xscale);
         sprite_index = run_sprite;
         //x += playerspeed;
     }
-    if(keyboard_check(left)) // && place_free(x-playerspeed,y)
-    {
+    if (keyboard_check(left)) { // && place_free(x-playerspeed,y)
         image_xscale = -abs(image_xscale);
         sprite_index = run_sprite;
         //x -= playerspeed;
     }
-    if(keyboard_check(jump))
-    {
+    if (keyboard_check(jump)) {
         sprite_index = jump_sprite;
         //y -= jumpspeed;
     }
-    if(keyboard_check(special))
-    {
+    if (keyboard_check(special)) {
         if (playerNum == 1) {
             if (global.player1ap >= 9) {
                 sprite_index = ap_sprite;
@@ -61,18 +55,14 @@ if (dead)
             }
         }
     }
-    if(keyboard_check(attack))
-    {
+    if (keyboard_check(attack)) {
         sprite_index = attack_sprite;
         isAttacking = true;
         //move_bounce_all(false);
-    }
-    else
-    {
+    } else {
         isAttacking = false;
     }
-    if(keyboard_check_released(right || left))
-    {
+    if (keyboard_check_released(right || left)) {
         sprite_index = idle_sprite;
     }
     
@@ -86,16 +76,13 @@ if (dead)
     hsp = move * movespeed * self.playerspeed;
     if (vsp < 10) vsp += grav;
     
-    if (place_meeting(x,y+1,obj_ground))
-    {
+    if (place_meeting(x,y+1,obj_ground)) {
         vsp = key_jump * -jumpspeed 
     }
     
     //Horizontal Collision for ground
-    if (place_meeting(x+hsp,y,obj_ground))
-    {
-        while(!place_meeting(x+sign(hsp),y,obj_ground))
-        {
+    if (place_meeting(x+hsp,y,obj_ground)) {
+        while (!place_meeting(x+sign(hsp),y,obj_ground)) {
             x += sign(hsp);
         }
         hsp = 0;
@@ -103,10 +90,8 @@ if (dead)
     x += hsp;
     
     //Vertical Collision for ground
-    if (place_meeting(x,y+vsp,obj_ground))
-    {
-        while(!place_meeting(x,y+sign(vsp),obj_ground))
-        {
+    if (place_meeting(x,y+vsp,obj_ground)) {
+        while (!place_meeting(x,y+sign(vsp),obj_ground)) {
             y += sign(vsp);
         }
         vsp = 0;

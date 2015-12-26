@@ -54,10 +54,8 @@ pressed = false;
             <kind>1</kind>
             <string>//spr = spr_button_pressed;
 //pressed = true;
-show_message("hello");
 if(obj != noone){
     global.player1 = obj;
-    show_message("player 1 assigned");
 }
 
 

@@ -27,6 +27,12 @@ if(!global.charaStatsLoaded)
         global.player1.hitStrength = 1.5;
         global.player1.abilityPoints = 10;
     }
+    else if (global.player1 == obj_iman) 
+    {
+        global.player1.playerspeed = 1;
+        global.player1.hitStrength = 1;
+        global.player1.abilityPoints = 20;
+    }
     global.charaStatsLoaded = true;
 }
 else
@@ -43,14 +49,13 @@ else
         global.player2.hitStrength = 1.5;
         global.player2.abilityPoints = 10;
     }
+    else if (global.player1 == obj_iman2) 
+    {
+        global.player1.playerspeed = 1;
+        global.player1.hitStrength = 1;
+        global.player1.abilityPoints = 20;
+    }
 }
-
-/*
-right = noone
-left = noone;
-jump = noone;
-attack = noone;
-*/
 
 switch(playerNum)
 {
