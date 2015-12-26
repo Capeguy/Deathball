@@ -56,6 +56,14 @@
     <sprite>sprites\spr_ground</sprite>
     <sprite>sprites\spr_button_pressed</sprite>
     <sprite>sprites\spr_arrow</sprite>
+    <sprites name="Select Screen">
+      <sprite>sprites\spr_select_shinobi1</sprite>
+      <sprite>sprites\spr_select_jane1</sprite>
+      <sprite>sprites\spr_select_iMan1</sprite>
+      <sprite>sprites\spr_select_shinobi2</sprite>
+      <sprite>sprites\spr_select_jane2</sprite>
+      <sprite>sprites\spr_select_iMan2</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

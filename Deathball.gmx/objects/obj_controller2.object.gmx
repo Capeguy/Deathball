@@ -29,17 +29,23 @@
 if(room == rm_characterSelect)
 {
     var shinobi, jane, iMan;
-    shinobi = instance_create(100, 500,obj_selectionBox2);
-    shinobi.spr = spr_shinobi_idle;
+    shinobi = instance_create(1000,100,obj_selectionBox2);
+    shinobi.spr = spr_select_shinobi2;
     shinobi.obj = obj_shinobi2;
     shinobi.name = "Shinobi";
     shinobi.playerNo = 2;
     
-    jane = instance_create(300,500,obj_selectionBox2);
-    jane.spr = spr_jane_idle;
-    jane.obj = obj_jane2;
+    jane = instance_create(1300,100,obj_selectionBox2);
+    jane.spr = spr_select_jane2;
+    jane.obj = obj_jane;
     jane.name = "Jane";
     jane.playerNo = 2;
+    
+    iMan = instance_create(1600, 100, obj_selectionBox2);
+    iMan.spr = spr_select_iMan2;
+    iMan.obj = noone;
+    iMan.name = "iMan";
+    iMan.playerNo = 2;
 }
 
 </string>
