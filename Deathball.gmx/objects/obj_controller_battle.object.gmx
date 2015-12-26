@@ -74,13 +74,49 @@ if (global.resetGame) {
     global.player1.canmove = true;
     global.player1.image_speed = 1;
     global.player1.sprite_index = global.player1.idle_sprite;
+    if (global.player1 == obj_shinobi) 
+    {
+        global.player1.playerspeed = 2.5;
+        global.player1.hitStrength = 1.0;
+        global.player1.abilityPoints = 10;
+    }
+    else if (global.player1 == obj_jane) 
+    {
+        global.player1.playerspeed = 1;
+        global.player1.hitStrength = 1.5;
+        global.player1.abilityPoints = 10;
+    }
+    else if (global.player1 == obj_iman) 
+    {
+        global.player1.playerspeed = 1;
+        global.player1.hitStrength = 1;
+        global.player1.abilityPoints = 20;
+    }
     
     global.player2.x = room_width - 200;
     global.player2.y = 700;
     global.player2.dead = false;
     global.player2.canmove = true;
     global.player2.image_speed = 1;
-    global.player2.sprite_index = global.player2.idle_sprite ;
+    global.player2.sprite_index = global.player2.idle_sprite;
+    if(global.player2 == obj_shinobi2)
+    {
+        global.player2.playerspeed = 2.5;
+        global.player2.hitStrength = 1.0;
+        global.player2.abilityPoints = 10;
+    }
+    else if(global.player2 == obj_jane2)
+    {
+        global.player2.playerspeed = 1;
+        global.player2.hitStrength = 1.5;
+        global.player2.abilityPoints = 10;
+    }
+    else if (global.player1 == obj_iman2) 
+    {
+        global.player1.playerspeed = 1;
+        global.player1.hitStrength = 1;
+        global.player1.abilityPoints = 20;
+    }
     with (obj_stone) {
         instance_destroy();
     }

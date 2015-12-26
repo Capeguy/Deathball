@@ -40,7 +40,7 @@ if (currenttime - global.lastCollision  > timeDiff) {
         }
         with (stone) { 
             if (speed < 100) {
-                speed += 10 * global.hitstrength;
+                speed += 10 + 10 * global.hitstrength;
             } 
         }
     } else {
