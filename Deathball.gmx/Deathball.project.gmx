@@ -11,6 +11,13 @@
     <sound>sound\snd_bat_hit</sound>
   </sounds>
   <sprites name="sprites">
+    <sprites name="iMan">
+      <sprite>sprites\spr_iman_idle</sprite>
+      <sprite>sprites\spr_iman_run</sprite>
+      <sprite>sprites\spr_iman_jump</sprite>
+      <sprite>sprites\spr_iman_attack</sprite>
+      <sprite>sprites\spr_iman_dead</sprite>
+    </sprites>
     <sprites name="Items">
       <sprite>sprites\spr_item_sonic</sprite>
       <sprite>sprites\spr_item_convert</sprite>
@@ -100,6 +107,8 @@
       <object>objects\obj_shinobi</object>
       <object>objects\obj_shinobi2</object>
       <object>objects\obj_jane</object>
+      <object>objects\obj_iman</object>
+      <object>objects\obj_iman2</object>
       <object>objects\obj_jane2</object>
     </objects>
     <object>objects\obj_player_parent</object>
@@ -123,9 +132,7 @@
       <object>objects\obj_winner</object>
     </objects>
   </objects>
-  <timelines name="timelines">
-    <timeline>timelines\died</timeline>
-  </timelines>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_characterSelect</room>

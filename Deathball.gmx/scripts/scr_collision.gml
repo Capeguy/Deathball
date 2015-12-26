@@ -1,6 +1,6 @@
 stone = argument0;
 player = argument1;
-if(stone.attackedStone){
+if (stone.attackedStone) {
     with (stone) {
         move_bounce_all(true);
     }
@@ -15,51 +15,42 @@ if (currenttime - global.lastCollision  > timeDiff) {
     if (player.isAttacking) {
         audio_play_sound(snd_bat_hit, 5, false);
         with (player) {
-            if(playerNum == 1)
-            {
+            if(playerNum == 1) {
                 global.hitstrength = player.hitStrength;
                 global.player1ap += player.aprate;
                 if (global.player1ap > 10)
                     global.player1ap = 10;
                 scr_ap(1, obj_hud_controller);
-                with(stone)
-                {
+                with(stone) {
                     sprite_index = spr_stone_player1;
                     attackedStone = true;
                 }
             }
-            else if (playerNum == 2)
-            {
+            else if (playerNum == 2) {
                 global.hitstrength = player.hitStrength;
                 global.player2ap += player.aprate;
                 if (global.player2ap > 10)
                     global.player2ap = 10;                
                 scr_ap(2, obj_hud_controller);
-                with(stone)
-                {
+                with(stone) {
                     sprite_index = spr_stone_player2;
                     attackedStone = true;
                 }
             }
         }
-        with(stone)
-        { 
-            if(speed < 100)
-            {
+        with (stone) { 
+            if (speed < 100) {
                 speed += 10 * global.hitstrength;
             } 
         }
     } else {
         if (!global.resetGame) {
-            if(stone.sprite_index == spr_stone_player1 && player.playerNum == 2)
-            {
+            if (stone.sprite_index == spr_stone_player1 && player.playerNum == 2) {
                 player.dead = true;
                 global.player2Lives--;
                 scr_live(2, obj_hud_controller);
                 with(stone){attackedStone = false;}
-            }   
-            else if(stone.sprite_index == spr_stone_player2 && player.playerNum == 1)
-            {
+            } else if(stone.sprite_index == spr_stone_player2 && player.playerNum == 1) {
                 player.dead = true;
                 global.player1Lives--;
                 scr_live(1, obj_hud_controller);
@@ -67,9 +58,7 @@ if (currenttime - global.lastCollision  > timeDiff) {
             }  
         }
     }
-}
-else
-{
+} else {
     adj = abs((stone.x - player.x));
     if (adj != 0) {
         theta = arctan((abs(stone.y - player.y)) / (adj));;

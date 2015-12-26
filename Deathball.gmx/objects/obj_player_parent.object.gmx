@@ -58,10 +58,9 @@ aprate = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.affectedPlayer == 1){
+            <string>if (global.affectedPlayer == 1) {
     global.player1.playerspeed = global.affectedPlayerSpeed;
-}
-else if(global.affectedPlayer == 2){
+} else if (global.affectedPlayer == 2) {
     global.player2.playerspeed = global.affectedPlayerSpeed;   
 }
 </string>
@@ -86,10 +85,9 @@ else if(global.affectedPlayer == 2){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.affectedPlayer == 1){
+            <string>if (global.affectedPlayer == 1) {
     global.player1.playerspeed = global.affectedPlayerSpeed;
-}
-else if(global.affectedPlayer == 2){
+} else if (global.affectedPlayer == 2) {
     global.player2.playerspeed = global.affectedPlayerSpeed;   
 }
 </string>
@@ -121,11 +119,7 @@ if (playerNum == 1) {
 } else {
     hitstrength = global.player2.hitStrength;
 }
-if (global.resetGame) {
-
-} 
-else
-{    
+if (!global.resetGame) {    
     stone_instance = instance_place(x+5, y, obj_stone);
     if(stone_instance != noone){
         scr_collision(stone_instance, self);
@@ -146,39 +140,15 @@ else
         }
     }
     item_instance = instance_place(x,y, obj_item_parent)
-    if(item_instance != noone)
-    {
+    if (item_instance != noone) {
         player_instance = instance_place(x,y, item_instance);
-        if(player_instance != noone){
+        if (player_instance != noone) {
             scr_item_collision(playerNum, item_instance);
         }
     }
-    
 }
 
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_item_parent">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>
@@ -204,8 +174,7 @@ else
 vspeed = 0;
 //landed = true;
 
-if(sprite_index = jump_sprite)
-{
+if (sprite_index = jump_sprite) {
     sprite_index = idle_sprite;
 }
 </string>
