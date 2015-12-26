@@ -56,13 +56,13 @@ if (dead) {
         }
     }
     if (keyboard_check(attack)) {
-        sprite_index = attack_sprite;
         isAttacking = true;
-        //move_bounce_all(false);
+        sprite_index = attack_sprite;
+        lastattack = current_time;
     } else {
         isAttacking = false;
     }
-    if (keyboard_check_released(right || left)) {
+    if (keyboard_check_released(right || left) && !isAttacking) {
         sprite_index = idle_sprite;
     }
     

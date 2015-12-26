@@ -36,6 +36,8 @@ playerspeed = 1;
 abilityPoints = 0;
 ap = 0;
 aprate = 1;
+lastattack = current_time;
+canAttack = false;
 </string>
           </argument>
         </arguments>
@@ -140,6 +142,7 @@ aprate = 1;
           <argument>
             <kind>1</kind>
             <string>if (global.pause) exit;
+canAttack = lastattack + global.attackInterval &lt; current_time;
 scr_gravity(1);
 var hitstrength = 0;
 if (playerNum == 1) {
@@ -174,6 +177,7 @@ if (!global.resetGame) {
             scr_item_collision(playerNum, item_instance);
         }
     }
+    
 }
 
 </string>

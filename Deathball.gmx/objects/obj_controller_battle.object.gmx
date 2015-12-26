@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>
 if (room == rm_battle) {
+    global.attackInterval = 500;
     global.resetGame = false;
     global.player1Lives = 5;
     global.player2Lives = 5;

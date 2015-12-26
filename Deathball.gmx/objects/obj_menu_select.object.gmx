@@ -25,10 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(rm_battle))
-    menu[0] = "Resume";
-else
-    menu[0] = "Start";
+            <string>menu[0] = "Start";
 menu[1] = "Controls";
 menu[2] = "Credits";
 menu[3] = "Quit";
