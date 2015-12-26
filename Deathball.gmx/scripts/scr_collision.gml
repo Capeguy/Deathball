@@ -1,6 +1,5 @@
 stone = argument0;
 player = argument1;
-//show_message(argument2);
 if(stone.attackedStone){
     with (stone) {
         move_bounce_all(true);
@@ -11,7 +10,7 @@ timeDiff = 400;
 currenttime = current_time;
 global.hitstrength = 0;
 if (currenttime - global.lastCollision  > timeDiff) {
-    //audio_play_sound(snd_ball_hit, 5, false);
+    audio_play_sound(snd_ball_hit, 5, false);
     global.lastCollision = currenttime;
     if (player.isAttacking) {
         audio_play_sound(snd_bat_hit, 5, false);
