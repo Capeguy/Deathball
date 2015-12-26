@@ -53,6 +53,7 @@
         <sprite>sprites\spr_shinobi_head</sprite>
         <sprite>sprites\spr_jane_head</sprite>
         <sprite>sprites\spr_image_placeholder</sprite>
+        <sprite>sprites\spr_iMan_head</sprite>
       </sprites>
       <sprites name="AP">
         <sprite>sprites\spr_ap_p1</sprite>
@@ -70,6 +71,8 @@
       <sprite>sprites\spr_select_shinobi2</sprite>
       <sprite>sprites\spr_select_jane2</sprite>
       <sprite>sprites\spr_select_iMan2</sprite>
+      <sprite>sprites\spr_chara_stats</sprite>
+      <sprite>sprites\spr_chara_trophy</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -107,6 +110,8 @@
       <object>objects\obj_controller2</object>
       <object>objects\obj_selectionBox2</object>
       <object>objects\obj_selectionBox</object>
+      <object>objects\obj_chara_stats</object>
+      <object>objects\obj_chara_trophy</object>
     </objects>
     <objects name="Player">
       <object>objects\obj_player1</object>

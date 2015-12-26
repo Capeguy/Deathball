@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>global.player2 = noone;
+charaStat2 = noone;
+charaTrophy2 = noone;
 if(room == rm_characterSelect)
 {
     var shinobi, jane, iMan;
@@ -37,15 +39,26 @@ if(room == rm_characterSelect)
     
     jane = instance_create(1300,100,obj_selectionBox2);
     jane.spr = spr_select_jane2;
-    jane.obj = obj_jane;
+    jane.obj = obj_jane2;
     jane.name = "Jane";
     jane.playerNo = 2;
     
     iMan = instance_create(1600, 100, obj_selectionBox2);
     iMan.spr = spr_select_iMan2;
-    iMan.obj = noone;
+    iMan.obj = obj_iman2;
     iMan.name = "iMan";
     iMan.playerNo = 2;
+    
+    charaStats2 = instance_create(1000, 500, obj_chara_stats);
+    with(charaStats2)
+    {
+        image_index = 0;
+        image_speed = 0;
+    }
+    
+    charaTrophy2 = instance_create(1300, 900, obj_chara_trophy);
+    charaTrophy2.image_index = 0;
+    charaTrophy2.image_speed = 0;
 }
 
 </string>

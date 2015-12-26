@@ -31,6 +31,8 @@ global.charaStatsLoaded = false;
 global.playerNum1 = noone;
 global.playerNum2 = noone;
 selectionstate = "player1";
+charaStats1 = noone;
+charaTrophy1 = noone;
 if(room == rm_characterSelect)
 {
     var shinobi, jane, iMan;
@@ -48,9 +50,20 @@ if(room == rm_characterSelect)
     
     iMan = instance_create(700, 100, obj_selectionBox);
     iMan.spr = spr_select_iMan1;
-    iMan.obj = noone;
+    iMan.obj = obj_iman;
     iMan.name = "iMan";
     iMan.playerNo = 1;
+    
+    charaStats1 = instance_create(100, 500, obj_chara_stats);
+    with(charaStats1)
+    {
+        image_index = 0;
+        image_speed = 0;
+    }
+    
+    charaTrophy1 = instance_create(400, 900, obj_chara_trophy);
+    charaTrophy1.image_index = 0;
+    charaTrophy1.image_speed = 0;
 }
 
 </string>
@@ -134,7 +147,12 @@ if(keyboard_check_pressed(vk_enter))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(room_width/2, 10 ,"Select your character");
+            <string>if(room == rm_characterSelect)
+{
+    draw_text(room_width/2, 10 ,"Select your character");
+    draw_set_font(font_menu);
+}
+
 
 </string>
           </argument>

@@ -56,6 +56,10 @@ else if(global.player1 == obj_jane)
 {
     spr = spr_jane_head;
 }
+else if(global.player1 == obj_iman)
+{
+    spr = spr_iMan_head;
+}
 
 draw_sprite(spr, 0,obj_live_p1.x + 450, obj_live_p1.y + 45);
 </string>

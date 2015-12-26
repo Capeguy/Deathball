@@ -37,7 +37,7 @@ if (!global.loaded) {
         attack_sprite = spr_jane_attack;
         ap_sprite = spr_jane_head;
         dead_sprite = spr_jane_dead;
-    } else if (global.player1 == obj_iman) {
+    } else if (global.player2 == obj_iman2) {
         idle_sprite = spr_iman_idle;
         run_sprite = spr_iman_run;
         jump_sprite = spr_iman_jump;
