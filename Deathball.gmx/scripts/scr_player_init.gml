@@ -19,19 +19,19 @@ if(!global.charaStatsLoaded)
     {
         global.player1.playerspeed = 2.5;
         global.player1.hitStrength = 1.0;
-        global.player1.abilityPoints = 10;
+        global.player1.aprate = 1;
     }
     else if (global.player1 == obj_jane) 
     {
         global.player1.playerspeed = 1;
-        global.player1.hitStrength = 1.5;
-        global.player1.abilityPoints = 10;
+        global.player1.hitStrength = 2.0;
+        global.player1.aprate = 1;
     }
     else if (global.player1 == obj_iman) 
     {
         global.player1.playerspeed = 1;
         global.player1.hitStrength = 1;
-        global.player1.abilityPoints = 20;
+        global.player1.aprate = 3;
     }
     global.charaStatsLoaded = true;
 }
@@ -41,19 +41,19 @@ else
     {
         global.player2.playerspeed = 2.5;
         global.player2.hitStrength = 1.0;
-        global.player2.abilityPoints = 10;
+        global.player2.aprate = 1;
     }
     else if(global.player2 == obj_jane2)
     {
         global.player2.playerspeed = 1;
         global.player2.hitStrength = 1.5;
-        global.player2.abilityPoints = 10;
+        global.player2.aprate = 1;
     }
     else if (global.player1 == obj_iman2) 
     {
         global.player1.playerspeed = 1;
         global.player1.hitStrength = 1;
-        global.player1.abilityPoints = 20;
+        global.player1.aprate = 3;
     }
 }
 
