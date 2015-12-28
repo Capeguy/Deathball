@@ -107,6 +107,18 @@ if(other.isAttacking)
         speed += 10;
         randomize();
         direction += random(360);
+        sprite_index = spr_stone_player2;
+    }
+}
+else
+{
+    if(sprite_index == spr_stone_player1)
+    {
+        with(other)
+        {
+            dead = true;
+            canmove = false;
+        }
     }
 }
 </string>
@@ -139,6 +151,18 @@ if(other.isAttacking)
         speed += 10;
         randomize();
         direction += random(360);
+        sprite_index = spr_stone_player1;
+    }
+}
+else
+{
+    if(sprite_index == spr_stone_player2)
+    {
+        with(other)
+        {
+            dead = true;
+            canmove = false;
+        }
     }
 }
 </string>

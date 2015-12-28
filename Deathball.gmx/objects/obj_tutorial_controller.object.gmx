@@ -27,12 +27,58 @@
             <kind>1</kind>
             <string>if(room == rm_tutorial)
 {
-     global.resetGame = false;
-    instance_create(400, 400, obj_shinobi_tutorial);
-    instance_create(room_width/2, 850, obj_ball_tutorial);
-    instance_create( 800, 400 , obj_jane_tutorial);
+    global.resetGame = false;
+    player1 = instance_create(400, 850, obj_shinobi_tutorial);
+    ball = instance_create(room_width/2, 850, obj_ball_tutorial);
+    player2 = instance_create(1200, 850 , obj_jane_tutorial);
+    
+    p1_controls = instance_create(200, 150, obj_player1_controls);
+    p2_controls = instance_create(1200, 150, obj_player2_controls);
+    
+    
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>obj_tutorial_controller</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.resetGame)
+{
+    player1.x = 400;
+    player1.y = 850;
+    player1.dead = false;
+    player1.canmove = true;
+    
+    player2.x = 1200;
+    player2.y = 850;
+    player2.dead = false;
+    player2.canmove = true;
+    
+    ball.x = room_width/2;
+    ball.y = 850;
+    ball.speed = 0;
+    ball.sprite_index = spr_stone;
+    
+    global.resetGame = false;
+}
 </string>
           </argument>
         </arguments>

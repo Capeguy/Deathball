@@ -74,6 +74,8 @@
       <sprite>sprites\spr_chara_stats</sprite>
       <sprite>sprites\spr_chara_trophy</sprite>
     </sprites>
+    <sprite>sprites\spr_tutorial_p2</sprite>
+    <sprite>sprites\spr_tutorial_p1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -154,6 +156,8 @@
       <object>objects\obj_tutorial_controller</object>
       <object>objects\obj_ball_tutorial</object>
       <object>objects\obj_jane_tutorial</object>
+      <object>objects\obj_player1_controls</object>
+      <object>objects\obj_player2_controls</object>
     </objects>
   </objects>
   <rooms name="rooms">

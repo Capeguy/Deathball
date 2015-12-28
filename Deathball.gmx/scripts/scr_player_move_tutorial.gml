@@ -11,9 +11,9 @@ if (dead) {
     }
     if (image_index >= image_number-1) {
         image_speed = 0;
-        if (global.player1Lives != 0 && global.player2Lives != 0) {
-            global.resetGame = true;
-        }
+        //if (global.player1Lives != 0 && global.player2Lives != 0) {
+        global.resetGame = true;
+        //}
     }
 } else if(canmove && !dead) {
     if (keyboard_check(right)) { // && place_free(x+playerspeed,y) this doesnt work
