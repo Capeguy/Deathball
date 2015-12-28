@@ -55,30 +55,19 @@ check = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.pause) {
-    if (oldspeed = 0) {
-        oldspeed = speed;
-        speed = 0;
-    }
-    exit;
-} else {
-    if (oldspeed != 0) {
-        speed = oldspeed;
-        oldspeed = 0;
-    }
-}
+            <string>
 if (global.resetGame) {
     
 } else if(attackedStone)
 {
     //move_bounce_all(true);
-    colobjectid = instance_place(x+5, y, obj_player_parent);
+    colobjectid = instance_place(x+5, y, obj_shinobi_tutorial);
     if (colobjectid != noone) 
     { 
         scr_collision(self, colobjectid); 
     } else {
     
-        colobjectid2 = instance_place(x - 5, y, obj_player_parent);
+        colobjectid2 = instance_place(x - 5, y, obj_shinobi_tutorial);
         if (colobjectid2 != noone) 
         { 
             scr_collision(self, colobjectid2); 
@@ -88,6 +77,70 @@ if (global.resetGame) {
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_jane_tutorial">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>move_bounce_all(false);
+if(other.isAttacking)
+{
+    with(self)
+    {
+        speed += 10;
+        randomize();
+        direction += random(360);
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_shinobi_tutorial">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>move_bounce_all(false);
+if(other.isAttacking)
+{
+    with(self)
+    {
+        speed += 10;
+        randomize();
+        direction += random(360);
+    }
+}
 </string>
           </argument>
         </arguments>

@@ -87,6 +87,7 @@
     <script>scripts\scr_sprite_config.gml</script>
     <script>scripts\scr_player_init.gml</script>
     <script>scripts\scr_player_move.gml</script>
+    <script>scripts\scr_player_move_tutorial.gml</script>
     <script>scripts\scr_ball.gml</script>
     <script>scripts\scr_live.gml</script>
     <script>scripts\scr_collision.gml</script>
@@ -147,6 +148,12 @@
       <object>objects\obj_ap_p1</object>
       <object>objects\obj_ap_p2</object>
       <object>objects\obj_winner</object>
+    </objects>
+    <objects name="Tutorial">
+      <object>objects\obj_shinobi_tutorial</object>
+      <object>objects\obj_tutorial_controller</object>
+      <object>objects\obj_ball_tutorial</object>
+      <object>objects\obj_jane_tutorial</object>
     </objects>
   </objects>
   <rooms name="rooms">
