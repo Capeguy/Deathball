@@ -154,6 +154,7 @@
     <room>rooms\rm_characterSelect</room>
     <room>rooms\rm_battle</room>
     <room>rooms\rm_victory</room>
+    <room>rooms\rm_tutorial</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

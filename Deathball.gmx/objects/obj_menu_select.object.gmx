@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>menu[0] = "Start";
-menu[1] = "Controls";
+menu[1] = "Tutorial";
 menu[2] = "Credits";
 menu[3] = "Quit";
 
@@ -83,6 +83,7 @@ if (keyboard_check_pressed(vk_enter) == 1) {
             break; 
         case 1: 
             //Go to controls room
+            room_goto(rm_tutorial);
             break;
         case 2: 
             //Go to Credits room
