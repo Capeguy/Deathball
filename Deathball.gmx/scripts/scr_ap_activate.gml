@@ -12,4 +12,9 @@ if (activator == obj_shinobi || activator == obj_shinobi2) {
     otherPlayer.hitStrength  = otherPlayer.hitStrength * 5;
     alarm[5] = fps * 7;   
     global.affectedPlayer = otherPlayer.playerNum;
+} else if (activator == obj_iman || activator == obj_iman2) {
+    with(obj_stone) {
+        image_alpha = 0;
+    }
+    alarm[7] = fps * 3;   
 }
