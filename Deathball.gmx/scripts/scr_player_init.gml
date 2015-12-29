@@ -49,7 +49,7 @@ else
         global.player2.hitStrength = 1.5;
         global.player2.aprate = 1;
     }
-    else if (global.player1 == obj_iman2) 
+    else if (global.player2 == obj_iman2) 
     {
         global.player1.playerspeed = 1;
         global.player1.hitStrength = 1;

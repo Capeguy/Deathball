@@ -74,12 +74,11 @@ if (keyboard_check_pressed(vk_enter) == 1) {
             //Go to character select room
             if (instance_exists(rm_battle)) {
                 room_goto(rm_battle);
-            } else {
-                with (all) {
-                    instance_destroy();
-                }    
-                room_goto(rm_characterSelect);
             }
+            with (all) {
+                instance_destroy();
+            }
+            room_goto(rm_characterSelect);
             break; 
         case 1: 
             //Go to controls room
