@@ -76,6 +76,7 @@
     </sprites>
     <sprite>sprites\spr_tutorial_p2</sprite>
     <sprite>sprites\spr_tutorial_p1</sprite>
+    <sprite>sprites\spr_enterbattle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -115,6 +116,7 @@
       <object>objects\obj_selectionBox</object>
       <object>objects\obj_chara_stats</object>
       <object>objects\obj_chara_trophy</object>
+      <object>objects\obj_enter_battle</object>
     </objects>
     <objects name="Player">
       <object>objects\obj_player1</object>

@@ -112,7 +112,7 @@ if(room == rm_characterSelect)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>/*
 if(keyboard_check_pressed(vk_enter))
 {
     if(global.player1 == noone &amp;&amp; global.player2 == noone)
@@ -124,7 +124,12 @@ if(keyboard_check_pressed(vk_enter))
         room_goto(rm_battle);
     }
 }
+*/
 
+if(global.player1 != noone &amp;&amp; global.player2 != noone)
+{
+    instance_create(room_width/2, 900, obj_enter_battle);
+}
 </string>
           </argument>
         </arguments>

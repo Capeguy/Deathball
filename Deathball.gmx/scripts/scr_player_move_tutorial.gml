@@ -1,4 +1,4 @@
-gravity_direction = 1;
+grav = 1;
 isAttacking = false;
 image_speed = 0.8;
 movespeed = 10;
