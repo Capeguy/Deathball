@@ -27,10 +27,15 @@
             <kind>1</kind>
             <string>
 credits = "#Credits# "; 
+credits += "Ngee Ann Polytechnic, School of Infocomm Technology#"
 credits += "A 2 week GameMaker:Studio Games Programming Assignment by:#";
 credits += "Ng Syn Kae &amp; Lau Jun Hao Benjamin.#";
 credits += "Dip in IT, Solutions Architect Specialization#";
 credits += "Supervisiors: Ms Lee Ching Yun &amp; Mr Andrew Tan#";
+credits += "Character Sprites - http://www.gameart2d.com/freebies.html#"
+credits += "Background - http://www.hdwallpaperpc.com/show-wallpaper/Gif_Waterfall_Tree_Pixel_Art_35584.html#"
+credits += "BGM - https://www.youtube.com/channel/UCDfwp9H_ob7kAtso1DABEPQ#";
+credits += "Sounds - http://soundbible.com/#";
 y = room_height;
 vspeed = -1;
 

@@ -76,6 +76,7 @@
     </sprites>
     <sprite>sprites\spr_tutorial_p2</sprite>
     <sprite>sprites\spr_tutorial_p1</sprite>
+    <sprite>sprites\spr_podium</sprite>
     <sprite>sprites\spr_enterbattle</sprite>
   </sprites>
   <backgrounds name="background">
@@ -152,10 +153,15 @@
       <object>objects\obj_head_p2</object>
       <object>objects\obj_ap_p1</object>
       <object>objects\obj_ap_p2</object>
-      <object>objects\obj_winner</object>
     </objects>
     <objects name="Credits">
       <object>objects\obj_credits</object>
+    </objects>
+    <objects name="Victory">
+      <object>objects\obj_winner</object>
+      <object>objects\obj_podium</object>
+      <object>objects\obj_winning_character</object>
+      <object>objects\obj_losing_character</object>
     </objects>
     <objects name="Tutorial">
       <object>objects\obj_shinobi_tutorial</object>
