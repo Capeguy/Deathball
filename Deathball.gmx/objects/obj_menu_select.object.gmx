@@ -86,6 +86,7 @@ if (keyboard_check_pressed(vk_enter) == 1) {
             break;
         case 2: 
             //Go to Credits room
+            room_goto(rm_credits);
             break;
         case 3: 
             //Quit game

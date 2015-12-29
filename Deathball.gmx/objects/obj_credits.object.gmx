@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,77 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.player1 = noone;
-global.loaded = false;
-global.charaStatsLoaded = false;
-global.playerNum1 = noone;
-global.playerNum2 = noone;
-selectionstate = "player1";
-charaStats1 = noone;
-charaTrophy1 = noone;
-if(room == rm_characterSelect)
-{
-    var shinobi, jane, iMan;
-    shinobi = instance_create(100,100,obj_selectionBox);
-    shinobi.spr = spr_select_shinobi1;
-    shinobi.obj = obj_shinobi;
-    shinobi.name = "Shinobi";
-    shinobi.playerNo = 1;
-    
-    jane = instance_create(400,100,obj_selectionBox);
-    jane.spr = spr_select_jane1;
-    jane.obj = obj_jane;
-    jane.name = "Jane";
-    jane.playerNo = 1;
-    
-    iMan = instance_create(700, 100, obj_selectionBox);
-    iMan.spr = spr_select_iMan1;
-    iMan.obj = obj_iman;
-    iMan.name = "iMan";
-    iMan.playerNo = 1;
-    
-    charaStats1 = instance_create(100, 500, obj_chara_stats);
-    with(charaStats1)
-    {
-        image_index = 0;
-        image_speed = 0;
-    }
-    
-    charaTrophy1 = instance_create(400, 800, obj_chara_trophy);
-    charaTrophy1.image_index = 0;
-    charaTrophy1.image_speed = 0;
-}
+            <string>
+credits = "#Credits# "; 
+credits += "A 2 week GameMaker:Studio Games Programming Assignment by:#";
+credits += "Ng Syn Kae &amp; Lau Jun Hao Benjamin.#";
+credits += "Dip in IT, Solutions Architect Specialization#";
+credits += "Supervisiors: Ms Lee Ching Yun &amp; Mr Andrew Tan#";
+y = room_height;
+vspeed = -1;
 
 </string>
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>211</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sound</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>6</kind>
-            <sound>snd_bgm</sound>
-          </argument>
-          <argument>
-            <kind>3</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="5" enumb="27">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -112,24 +56,7 @@ if(room == rm_characterSelect)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-if(keyboard_check_pressed(vk_enter))
-{
-    if(global.player1 == noone &amp;&amp; global.player2 == noone)
-    {
-        show_message("Someone has not been assigned a character");   
-    }
-    else
-    {
-        room_goto(rm_battle);
-    }
-}
-*/
-
-if(global.player1 != noone &amp;&amp; global.player2 != noone)
-{
-    instance_create(room_width/2, 900, obj_enter_battle);
-}
+            <string>room_goto(rm_menu);
 </string>
           </argument>
         </arguments>
@@ -152,13 +79,11 @@ if(global.player1 != noone &amp;&amp; global.player2 != noone)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(room == rm_characterSelect)
-{
-    draw_text(room_width/2, 10 ,"Select your character");
-    draw_set_font(font_menu);
-}
-
-
+            <string>draw_set_color(c_white);
+draw_set_halign(fa_center);
+draw_set_font(font_endCredits);
+draw_text(room_width/2,y,credits);
+if ( y &lt; -string_height(credits) ) y = room_height;
 </string>
           </argument>
         </arguments>

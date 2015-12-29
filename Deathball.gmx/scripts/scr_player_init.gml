@@ -51,9 +51,9 @@ else
     }
     else if (global.player2 == obj_iman2) 
     {
-        global.player1.playerspeed = 1;
-        global.player1.hitStrength = 1;
-        global.player1.aprate = 3;
+        global.player2.playerspeed = 1;
+        global.player2.hitStrength = 1;
+        global.player2.aprate = 3;
     }
 }
 

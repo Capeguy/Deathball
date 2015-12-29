@@ -16,5 +16,5 @@ if (activator == obj_shinobi || activator == obj_shinobi2) {
     with(obj_stone) {
         image_alpha = 0;
     }
-    alarm[7] = fps * 3;   
+    alarm[7] = fps * 1;   
 }

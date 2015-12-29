@@ -103,6 +103,7 @@
     <font>fonts\font_menu</font>
     <font>fonts\font_character_select</font>
     <font>fonts\font_win</font>
+    <font>fonts\font_endCredits</font>
   </fonts>
   <objects name="objects">
     <objects name="Menu">
@@ -153,6 +154,9 @@
       <object>objects\obj_ap_p2</object>
       <object>objects\obj_winner</object>
     </objects>
+    <objects name="Credits">
+      <object>objects\obj_credits</object>
+    </objects>
     <objects name="Tutorial">
       <object>objects\obj_shinobi_tutorial</object>
       <object>objects\obj_tutorial_controller</object>
@@ -168,6 +172,7 @@
     <room>rooms\rm_battle</room>
     <room>rooms\rm_victory</room>
     <room>rooms\rm_tutorial</room>
+    <room>rooms\rm_credits</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
