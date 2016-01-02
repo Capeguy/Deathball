@@ -110,6 +110,7 @@
     <objects name="Menu">
       <object>objects\obj_menu_select</object>
       <object>objects\obj_pause</object>
+      <object>objects\odj_ap_text</object>
     </objects>
     <objects name="Selection">
       <object>objects\obj_controller</object>
