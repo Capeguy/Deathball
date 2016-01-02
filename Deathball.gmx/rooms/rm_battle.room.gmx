@@ -173,6 +173,7 @@
     <instance objName="obj_hud_controller" x="32" y="32" name="inst_FC72EE4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_item_controller" x="320" y="96" name="inst_A4B714A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="-64" y="288" name="inst_641B879C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="odj_ap_text" x="64" y="-32" name="inst_4F125A30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
