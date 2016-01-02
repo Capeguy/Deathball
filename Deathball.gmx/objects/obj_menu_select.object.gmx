@@ -82,7 +82,7 @@ if (keyboard_check_pressed(vk_enter) == 1) {
             break; 
         case 1: 
             //Go to controls room
-            room_goto(rm_tutorial);
+            room_goto(rm_tutorial_text);
             break;
         case 2: 
             //Go to Credits room

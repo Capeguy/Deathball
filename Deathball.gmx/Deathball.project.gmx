@@ -74,8 +74,14 @@
       <sprite>sprites\spr_chara_stats</sprite>
       <sprite>sprites\spr_chara_trophy</sprite>
     </sprites>
-    <sprite>sprites\spr_tutorial_p2</sprite>
-    <sprite>sprites\spr_tutorial_p1</sprite>
+    <sprites name="Tutorial">
+      <sprite>sprites\spr_tutorial_p1</sprite>
+      <sprite>sprites\spr_tutorial_p2</sprite>
+      <sprite>sprites\spr_tutorial_text</sprite>
+      <sprite>sprites\spr_next</sprite>
+      <sprite>sprites\spr_back</sprite>
+      <sprite>sprites\spr_tutorial_button</sprite>
+    </sprites>
     <sprite>sprites\spr_podium</sprite>
     <sprite>sprites\spr_enterbattle</sprite>
   </sprites>
@@ -163,6 +169,13 @@
       <object>objects\obj_winning_character</object>
       <object>objects\obj_losing_character</object>
     </objects>
+    <objects name="Text tutorial">
+      <object>objects\obj_next</object>
+      <object>objects\obj_text</object>
+      <object>objects\obj_tutorial_text_controller</object>
+      <object>objects\obj_back</object>
+      <object>objects\obj_tutorial_button</object>
+    </objects>
     <objects name="Tutorial">
       <object>objects\obj_shinobi_tutorial</object>
       <object>objects\obj_tutorial_controller</object>
@@ -179,6 +192,7 @@
     <room>rooms\rm_victory</room>
     <room>rooms\rm_tutorial</room>
     <room>rooms\rm_credits</room>
+    <room>rooms\rm_tutorial_text</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
