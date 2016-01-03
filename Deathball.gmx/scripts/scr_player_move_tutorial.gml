@@ -31,7 +31,21 @@ if (dead) {
         //y -= jumpspeed;
     }
     if (keyboard_check(special)) {
-        sprite_index = ap_sprite;
+        if(currentAP >=10)
+        {
+            sprite_index = ap_sprite;
+            currentAP = 0
+            if(playerNum == 1)
+            {
+                obj_tutorial_controller.ap1.image_index = currentAP; 
+                scr_ap_activate_tutorial(global.p1, global.p2);
+            }
+            else if (playerNum == 2)
+            {
+                obj_tutorial_controller.ap2.image_index = currentAP;
+                scr_ap_activate_tutorial(global.p2, global.p1);
+            }
+        }
     }
     if (keyboard_check(attack)) {
         isAttacking = true;
@@ -51,7 +65,7 @@ if (dead) {
     
     //React to inputs
     move = key_left + key_right;
-    hsp = move * movespeed * 1;
+    hsp = move * movespeed * playerspeed;
     if (vsp < 10) vsp += grav;
     
     if (place_meeting(x,y+1,obj_ground)) {

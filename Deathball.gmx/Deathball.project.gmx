@@ -103,6 +103,7 @@
     <script>scripts\scr_collision.gml</script>
     <script>scripts\scr_ap.gml</script>
     <script>scripts\scr_ap_activate.gml</script>
+    <script>scripts\scr_ap_activate_tutorial.gml</script>
     <script>scripts\scr_spawn_item.gml</script>
     <script>scripts\scr_item_collision.gml</script>
   </scripts>
@@ -178,6 +179,9 @@
       <object>objects\obj_tutorial_button</object>
     </objects>
     <objects name="Tutorial">
+      <object>objects\obj_tutorial_ap2</object>
+      <object>objects\obj_iman_tutorial</object>
+      <object>objects\obj_tutorial_ap1</object>
       <object>objects\obj_shinobi_tutorial</object>
       <object>objects\obj_tutorial_controller</object>
       <object>objects\obj_ball_tutorial</object>

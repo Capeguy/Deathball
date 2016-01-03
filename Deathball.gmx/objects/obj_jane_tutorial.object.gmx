@@ -34,7 +34,8 @@ isattacking = false;
 ishurting = 0;
 attackspeed = 10;
 dead = false;
-
+currentAP = 0;
+playerNum = 2;
 
 right = vk_right;
 left = vk_left;

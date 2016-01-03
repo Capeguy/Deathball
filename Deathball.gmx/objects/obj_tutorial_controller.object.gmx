@@ -28,14 +28,19 @@
             <string>if(room == rm_tutorial)
 {
     global.resetGame = false;
-    player1 = instance_create(400, 850, obj_shinobi_tutorial);
+    global.p1 = instance_create(400, 850, obj_shinobi_tutorial);
     ball = instance_create(room_width/2, 850, obj_ball_tutorial);
-    player2 = instance_create(1200, 850 , obj_jane_tutorial);
+    global.p2 = instance_create(1300, 850 , obj_iman_tutorial);
     
     p1_controls = instance_create(200, 150, obj_player1_controls);
     p2_controls = instance_create(1200, 150, obj_player2_controls);
     
-    
+    ap1 = instance_create(400, 1200, obj_tutorial_ap1);
+    ap1.image_speed = 0;
+    ap1.image_index = 0;
+    ap2 = instance_create(1500, 1200, obj_tutorial_ap2);
+    ap2.image_speed = 0;
+    ap2.image_index = 0;
 }
 
 </string>
@@ -62,15 +67,15 @@
             <kind>1</kind>
             <string>if(global.resetGame)
 {
-    player1.x = 400;
-    player1.y = 850;
-    player1.dead = false;
-    player1.canmove = true;
+    global.p1.x = 400;
+    global.p1.y = 850;
+    global.p1.dead = false;
+    global.p1.canmove = true;
     
-    player2.x = 1200;
-    player2.y = 850;
-    player2.dead = false;
-    player2.canmove = true;
+    global.p2.x = 1300;
+    global.p2.y = 850;
+    global.p2.dead = false;
+    global.p2.canmove = true;
     
     ball.x = room_width/2;
     ball.y = 850;
