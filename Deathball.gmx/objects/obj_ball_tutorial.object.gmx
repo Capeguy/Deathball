@@ -82,58 +82,6 @@ if (global.resetGame) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_iman_tutorial">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>move_bounce_all(false);
-if(other.isAttacking)
-{
-    with(self)
-    {
-        speed += 10;
-        randomize();
-        direction += random(360);
-        sprite_index = spr_stone_player2;
-    }
-    with(other)
-    {
-        if(currentAP&gt;=10)
-            currentAP = 10;
-        else
-            currentAP++;
-    }
-    obj_tutorial_controller.ap2.image_index = other.currentAP;
-}
-else
-{
-    if(sprite_index == spr_stone_player1)
-    {
-        with(other)
-        {
-            dead = true;
-            canmove = false;
-        }
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_jane_tutorial">
       <action>
         <libid>1</libid>
@@ -225,6 +173,58 @@ if(other.isAttacking)
 else
 {
     if(sprite_index == spr_stone_player2)
+    {
+        with(other)
+        {
+            dead = true;
+            canmove = false;
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_iman_tutorial">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>move_bounce_all(false);
+if(other.isAttacking)
+{
+    with(self)
+    {
+        speed += 10;
+        randomize();
+        direction += random(360);
+        sprite_index = spr_stone_player2;
+    }
+    with(other)
+    {
+        if(currentAP&gt;=10)
+            currentAP = 10;
+        else
+            currentAP++;
+    }
+    obj_tutorial_controller.ap2.image_index = other.currentAP;
+}
+else
+{
+    if(sprite_index == spr_stone_player1)
     {
         with(other)
         {
