@@ -1,7 +1,7 @@
-scr_sprite_config();
 
 
 playerNum = argument0;
+scr_sprite_config(playerNum);
 
 playerspeed = 1;
 jumpspeed = 20;
@@ -15,46 +15,12 @@ dead = false;
 
 if(!global.charaStatsLoaded)
 {
-    if (global.player1 == obj_shinobi) 
-    {
-        global.player1.playerspeed = 2.5;
-        global.player1.hitStrength = 1.0;
-        global.player1.aprate = 1;
-    }
-    else if (global.player1 == obj_jane) 
-    {
-        global.player1.playerspeed = 1;
-        global.player1.hitStrength = 2.0;
-        global.player1.aprate = 1;
-    }
-    else if (global.player1 == obj_iman) 
-    {
-        global.player1.playerspeed = 1;
-        global.player1.hitStrength = 1;
-        global.player1.aprate = 3;
-    }
+    
     global.charaStatsLoaded = true;
 }
 else
 {
-    if(global.player2 == obj_shinobi2)
-    {
-        global.player2.playerspeed = 2.5;
-        global.player2.hitStrength = 1.0;
-        global.player2.aprate = 1;
-    }
-    else if(global.player2 == obj_jane2)
-    {
-        global.player2.playerspeed = 1;
-        global.player2.hitStrength = 1.5;
-        global.player2.aprate = 1;
-    }
-    else if (global.player2 == obj_iman2) 
-    {
-        global.player2.playerspeed = 1;
-        global.player2.hitStrength = 1;
-        global.player2.aprate = 3;
-    }
+    
 }
 
 switch(playerNum)
@@ -64,7 +30,25 @@ switch(playerNum)
         left = ord('A');
         jump = ord('W');
         attack = ord('S');
-        special = ord('R');    
+        special = ord('R'); 
+        if (global.player1 == obj_shinobi) 
+        {
+            global.player1.playerspeed = 2.5;
+            global.player1.hitStrength = 1.0;
+            global.player1.aprate = 1;
+        }
+        else if (global.player1 == obj_jane) 
+        {
+            global.player1.playerspeed = 1;
+            global.player1.hitStrength = 2.0;
+            global.player1.aprate = 1;
+        }
+        else if (global.player1 == obj_iman) 
+        {
+            global.player1.playerspeed = 1;
+            global.player1.hitStrength = 1;
+            global.player1.aprate = 3;
+        }   
     break;
 
     case 2:
@@ -73,6 +57,24 @@ switch(playerNum)
         jump = vk_up;
         attack = vk_down;
         special = vk_shift;
+        if(global.player2 == obj_shinobi2)
+        {
+            global.player2.playerspeed = 2.5;
+            global.player2.hitStrength = 1.0;
+            global.player2.aprate = 1;
+        }
+        else if(global.player2 == obj_jane2)
+        {
+            global.player2.playerspeed = 1;
+            global.player2.hitStrength = 1.5;
+            global.player2.aprate = 1;
+        }
+        else if (global.player2 == obj_iman2) 
+        {
+            global.player2.playerspeed = 1;
+            global.player2.hitStrength = 1;
+            global.player2.aprate = 3;
+        }
         break;
            
     default:

@@ -5,6 +5,6 @@ array[3] = obj_item_abilityplus;
 array[4] = obj_item_shrink;
 itemNum = random(array_length_1d(array)) - 1;
 obj_item_controller.itemsOnField++;
-var itemX = irandom_range(64, room_width-64);
-var itemY = irandom_range(600, 800);
+var itemX = irandom_range(100, room_width-100);
+var itemY = irandom_range(700, 800);
 instance_create(itemX, itemY, array[itemNum]);

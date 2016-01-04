@@ -1,4 +1,4 @@
-if (!global.loaded) {
+if (argument0 == 1) {
     if (global.player1 == obj_shinobi) {
         idle_sprite = spr_shinobi_idle;
         run_sprite = spr_shinobi_run;

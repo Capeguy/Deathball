@@ -62,6 +62,7 @@ if (dead) {
     } else {
         isAttacking = false;
     }
+    
     if (keyboard_check_released(right || left) && !isAttacking) {
         sprite_index = idle_sprite;
     }
